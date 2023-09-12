@@ -1,0 +1,17 @@
+
+Qqs instructions pour le lancement du tracé de trajectoire - intensité 
+
+Il faut recopier tous les scripts présents qq part sur un serveur avec un d'espace pour les fichiers gribs: 
+
+1) Créer le répertoire "tempoarp" en local
+
+2) Modifier tous les chemins en local dans le script lance_xxxx et metre lvisu=false (truc perso pour envoyer nos images sur le site PE AROME-OM)
+
+
+2) lancer ./lance_Hurr-Track-PNT_ARP.sh 'GLOB025' 'CUSTOM-HN' '4dvarfr' '96' 'XP'
+
+
+le dernier argument est echmax qui controle la fenêtre du suivi et du tracé
+
+
+

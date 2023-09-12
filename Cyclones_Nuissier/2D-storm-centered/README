@@ -1,0 +1,17 @@
+
+Qqs instructions pour le lancement des coupes 2D cyclone centré. Attention c'est fois tout est géré dans les fonctions persos python qui font les calculs et les tracés. Tous ces développements se trouve dans le répertoire "DEVPYTHONTC" 
+
+Il faut recopier tous les scripts présents qq part sur un serveur avec un d'espace pour les fichiers gribs: 
+
+1) Créer le répertoire "tempoarp" en local
+
+2) Modifier tous les chemins en local dans le script lance_xxxx et metre lvisu=false (truc perso pour envoyer nos images sur le site PE AROME-OM)
+
+
+2) lancer ./lance_compute_diagTC-ARPEGE.sh annee mois jour heure echmax xp 'False ou True' tcname ## False ou True pour recup
+
+
+le dernier argument est echmax qui controle la fenêtre du suivi et du tracé
+
+
+

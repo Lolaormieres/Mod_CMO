@@ -1,0 +1,5 @@
+#GEO
+#FORMAT XY_VECTOR
+# lat lon height date time u v
+#DATA
+30.50 -80.50 0 20030617 1200 0.00 0.00

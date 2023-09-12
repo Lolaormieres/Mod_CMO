@@ -1,0 +1,114 @@
+Thu Jul 20 16:59:56 CEST 2023
+Thu Jul 20 16:59:56 CEST 2023
+Debut recuperation ARPEGE
+Thu Jul 20 16:59:56 CEST 2023
+Vortex 1.9.0 loaded ( Thursday 20. July 2023, at 16:59:56 )
+
+----------------------------------------------------------------------------------------------------
+# Resource Handler 01/09                                                                           #
+----------------------------------------------------------------------------------------------------
+00. <vortex.data.handlers.Handler object at 0x7fe778923c40>
+  Complete  : True
+  Container : <vortex.data.containers.SingleFile object at 0x7fe77894cdc0 | path='grid.arpege-forecast.GLOB025+0000:00.grib'>
+  Provider  : <vortex.data.providers.VortexStd object at 0x7fe77894ceb0 | namespace='vortex.archive.fr' block='forecast'>
+  Resource  : <common.data.gridfiles.GridPointExport object at 0x7fe77894cb80 | model='arpege' date='2022-09-18T00:00:00Z' cutoff='production' geometry='<vortex.data.geometries.LonlatGeometry | tag='glob025' id='Global BDAP target' r='00dg250'>' origin='fcst' filtername='None' term='00:00'>
+
+:-) Action 'get' on the resource handler went fine
+
+----------------------------------------------------------------------------------------------------
+# Resource Handler 02/09                                                                           #
+----------------------------------------------------------------------------------------------------
+00. <vortex.data.handlers.Handler object at 0x7fe778923a30>
+  Complete  : True
+  Container : <vortex.data.containers.SingleFile object at 0x7fe77894d030 | path='grid.arpege-forecast.GLOB025+0006:00.grib'>
+  Provider  : <vortex.data.providers.VortexStd object at 0x7fe77894d000 | namespace='vortex.archive.fr' block='forecast'>
+  Resource  : <common.data.gridfiles.GridPointExport object at 0x7fe77894ccd0 | model='arpege' date='2022-09-18T00:00:00Z' cutoff='production' geometry='<vortex.data.geometries.LonlatGeometry | tag='glob025' id='Global BDAP target' r='00dg250'>' origin='fcst' filtername='None' term='06:00'>
+
+:-) Action 'get' on the resource handler went fine
+
+----------------------------------------------------------------------------------------------------
+# Resource Handler 03/09                                                                           #
+----------------------------------------------------------------------------------------------------
+00. <vortex.data.handlers.Handler object at 0x7fe77894cb50>
+  Complete  : True
+  Container : <vortex.data.containers.SingleFile object at 0x7fe77894d270 | path='grid.arpege-forecast.GLOB025+0012:00.grib'>
+  Provider  : <vortex.data.providers.VortexStd object at 0x7fe77894d240 | namespace='vortex.archive.fr' block='forecast'>
+  Resource  : <common.data.gridfiles.GridPointExport object at 0x7fe77894cf70 | model='arpege' date='2022-09-18T00:00:00Z' cutoff='production' geometry='<vortex.data.geometries.LonlatGeometry | tag='glob025' id='Global BDAP target' r='00dg250'>' origin='fcst' filtername='None' term='12:00'>
+
+:-) Action 'get' on the resource handler went fine
+
+----------------------------------------------------------------------------------------------------
+# Resource Handler 04/09                                                                           #
+----------------------------------------------------------------------------------------------------
+00. <vortex.data.handlers.Handler object at 0x7fe77894cc70>
+  Complete  : True
+  Container : <vortex.data.containers.SingleFile object at 0x7fe77894d4b0 | path='grid.arpege-forecast.GLOB025+0018:00.grib'>
+  Provider  : <vortex.data.providers.VortexStd object at 0x7fe77894d480 | namespace='vortex.archive.fr' block='forecast'>
+  Resource  : <common.data.gridfiles.GridPointExport object at 0x7fe77894d1b0 | model='arpege' date='2022-09-18T00:00:00Z' cutoff='production' geometry='<vortex.data.geometries.LonlatGeometry | tag='glob025' id='Global BDAP target' r='00dg250'>' origin='fcst' filtername='None' term='18:00'>
+
+:-) Action 'get' on the resource handler went fine
+
+----------------------------------------------------------------------------------------------------
+# Resource Handler 05/09                                                                           #
+----------------------------------------------------------------------------------------------------
+00. <vortex.data.handlers.Handler object at 0x7fe77894d060>
+  Complete  : True
+  Container : <vortex.data.containers.SingleFile object at 0x7fe77894d6f0 | path='grid.arpege-forecast.GLOB025+0024:00.grib'>
+  Provider  : <vortex.data.providers.VortexStd object at 0x7fe77894d6c0 | namespace='vortex.archive.fr' block='forecast'>
+  Resource  : <common.data.gridfiles.GridPointExport object at 0x7fe77894d3f0 | model='arpege' date='2022-09-18T00:00:00Z' cutoff='production' geometry='<vortex.data.geometries.LonlatGeometry | tag='glob025' id='Global BDAP target' r='00dg250'>' origin='fcst' filtername='None' term='24:00'>
+
+:-) Action 'get' on the resource handler went fine
+
+----------------------------------------------------------------------------------------------------
+# Resource Handler 06/09                                                                           #
+----------------------------------------------------------------------------------------------------
+00. <vortex.data.handlers.Handler object at 0x7fe77894d2a0>
+  Complete  : True
+  Container : <vortex.data.containers.SingleFile object at 0x7fe77894d930 | path='grid.arpege-forecast.GLOB025+0030:00.grib'>
+  Provider  : <vortex.data.providers.VortexStd object at 0x7fe77894d900 | namespace='vortex.archive.fr' block='forecast'>
+  Resource  : <common.data.gridfiles.GridPointExport object at 0x7fe77894d630 | model='arpege' date='2022-09-18T00:00:00Z' cutoff='production' geometry='<vortex.data.geometries.LonlatGeometry | tag='glob025' id='Global BDAP target' r='00dg250'>' origin='fcst' filtername='None' term='30:00'>
+
+:-) Action 'get' on the resource handler went fine
+
+----------------------------------------------------------------------------------------------------
+# Resource Handler 07/09                                                                           #
+----------------------------------------------------------------------------------------------------
+00. <vortex.data.handlers.Handler object at 0x7fe77894d4e0>
+  Complete  : True
+  Container : <vortex.data.containers.SingleFile object at 0x7fe77894db70 | path='grid.arpege-forecast.GLOB025+0036:00.grib'>
+  Provider  : <vortex.data.providers.VortexStd object at 0x7fe77894db40 | namespace='vortex.archive.fr' block='forecast'>
+  Resource  : <common.data.gridfiles.GridPointExport object at 0x7fe77894d870 | model='arpege' date='2022-09-18T00:00:00Z' cutoff='production' geometry='<vortex.data.geometries.LonlatGeometry | tag='glob025' id='Global BDAP target' r='00dg250'>' origin='fcst' filtername='None' term='36:00'>
+
+:-) Action 'get' on the resource handler went fine
+
+----------------------------------------------------------------------------------------------------
+# Resource Handler 08/09                                                                           #
+----------------------------------------------------------------------------------------------------
+00. <vortex.data.handlers.Handler object at 0x7fe77894d720>
+  Complete  : True
+  Container : <vortex.data.containers.SingleFile object at 0x7fe77894ddb0 | path='grid.arpege-forecast.GLOB025+0042:00.grib'>
+  Provider  : <vortex.data.providers.VortexStd object at 0x7fe77894dd80 | namespace='vortex.archive.fr' block='forecast'>
+  Resource  : <common.data.gridfiles.GridPointExport object at 0x7fe77894dab0 | model='arpege' date='2022-09-18T00:00:00Z' cutoff='production' geometry='<vortex.data.geometries.LonlatGeometry | tag='glob025' id='Global BDAP target' r='00dg250'>' origin='fcst' filtername='None' term='42:00'>
+
+:-) Action 'get' on the resource handler went fine
+
+----------------------------------------------------------------------------------------------------
+# Resource Handler 09/09                                                                           #
+----------------------------------------------------------------------------------------------------
+00. <vortex.data.handlers.Handler object at 0x7fe77894d960>
+  Complete  : True
+  Container : <vortex.data.containers.SingleFile object at 0x7fe77894dff0 | path='grid.arpege-forecast.GLOB025+0048:00.grib'>
+  Provider  : <vortex.data.providers.VortexStd object at 0x7fe77894dfc0 | namespace='vortex.archive.fr' block='forecast'>
+  Resource  : <common.data.gridfiles.GridPointExport object at 0x7fe77894dcf0 | model='arpege' date='2022-09-18T00:00:00Z' cutoff='production' geometry='<vortex.data.geometries.LonlatGeometry | tag='glob025' id='Global BDAP target' r='00dg250'>' origin='fcst' filtername='None' term='48:00'>
+
+:-) Action 'get' on the resource handler went fine
+Vortex 1.9.0 completed ( Thursday 20. July 2023, at 17:04:26 )
+Fin de la recuperation ARPEGE
+Thu Jul 20 17:04:26 CEST 2023
+Thu Jul 20 17:04:26 CEST 2023
+Vortex 1.9.0 loaded ( Thursday 20. July 2023, at 17:04:35 )
+On se trouve sur le bassin= CUSTOM-HN
+On a 9 echeances a traiter
+Il y a 1 cyclones analysés pour le 18/09/2022 à 00 UTC
+Vortex 1.9.0 completed ( Thursday 20. July 2023, at 17:04:36 )
+Thu Jul 20 17:04:36 CEST 2023
