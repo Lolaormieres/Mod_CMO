@@ -8,6 +8,7 @@ Cartes_moyenne_diurne_clean.py 					--> trace cartes moyennes de rechauffement d
 Cartes_sst.py 		       					--> trace cartes de sst
 Cartes_moyenne_abs_optimise.py 					--> trace cartes d'eccart absolu avec Merc entre deux experiences differentes
 
+obs/obs_guess.py 						--> Recuperer Netcdf (avec obs values, fgdepar, andeparm lon, lat etc..) -- fichier nc mis dans repertoire respectif de .fa
 -------Repertoire dans lequel il y a les fichiers csv de biais et std de SST et/ou Temp en fct echeances et les .py 
 1. DF_SST_mapfactor_mask_trop_corr/
 DF_boucle_sst_expe_mapfactor_mask.py  				--> calcul biais de sst fct des echeances par rapport a Merc.  
@@ -17,8 +18,10 @@ DF_boucle_ech_carole_mapfactor_mask.py 				--> calcul biais de temp sur la colon
 DF_boucle_sst_expe_mapfactor_mask.py   				--> Calul biais et ecarts types de sst par rapport aux bouees (f.extract,lon,lat)
 
 
-DF_plot_sst.py 			       				--> Plot evolution temporelle des biais de SST et std
-DF_plot_sst_expe_optimise_sensitivitytest.py			--> Fig. 6
+
+DF_plot_sst.py 			       				--> Plot evolution temporelle des biais de SST et std -- Avec csv DF_SST_mapfactor_mask_trop_corr/*csv
+DF_plot_sst_expe_optimise_sensitivitytest.py			--> Fig. 6 -- Avec csv DF_SST_mapfactor_mask_trop_corr/*csv
+
 plot_an_fg_depar.py 		          			--> Fig. 11 plot andepar et fgdepar issu de assimilation des bouees(avant recuperer les Netcdf avec /home/ormieresl/Routines/obs/obs_guess.py, 				indiquer date et experiences + varno = 4 (bouees fixes et derivantes), varno = 1 (bouees + navires), anflag=1 signifie data de bouee valide pour l'assimilation.
 
 Score_ech_generale_allzone_expe_mapfactor_nottitle.py   	--> Fig.8 Patates des biais de temp sur la col d'eau
