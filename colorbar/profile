@@ -1,0 +1,13 @@
+export MPLBACKEND=agg
+
+
+export EPYGRAM_DIR=/home/ormieresl/.local/lib/python3.10/site-packages/EPyGrAM
+
+# unless you have a good reason for it, let the library manage on her own:
+unset GRIB_SAMPLES_PATH
+unset GRIB_DEFINITION_PATH
+unset ECCODES_SAMPLES_PATH
+unset ECCODES_DEFINITION_PATH
+
+# PATH for apptools
+export PATH=$PATH:$EPYGRAM_DIR/apptools
