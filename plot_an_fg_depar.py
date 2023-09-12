@@ -81,15 +81,15 @@ level = levelfic[0:nb_level]
 
 ## Definition color Pale
 color_GL55='lightskyblue'#'paleturquoise' ## GL55 '#648FFF' 'steelblue'
-color_GKOR='pink'#hotpink'  ## GKOR
-color_GKPH= 'mediumpurple' ## GKPH '#DC267F'
+color_GKOR='pink'#hotpink'  
+color_GKPH= 'mediumpurple' 
 color_GM6E='paleturquoise'
 color_GMOT='peachpuff'
-color_GN84='palegreen' # 'red'
+color_GN84='palegreen' # 
 color_GO4A='rosybrown'
 color_GNSR='palegreen'
 color_GNYG='yellow'
-color_GOJQ='navajowhite'#burlywood' #'teal'
+color_GOJQ='navajowhite'
 color_GKCJ='dimgrey'
 
 #domaines lonmin,lonmax,latmin,matmax
@@ -101,7 +101,7 @@ expe=['GL55','GKOR','GKPH','GN84','GO4A','GOJQ','GKCJ']
 XP='GN84'
 SST_bouees=[]
 
-### Ceate Dataframe
+#create dataframe
 raw_data = {'date': [''],
         'expe': [''],
         'andepar': [''],
@@ -123,17 +123,15 @@ for e in range(len(expe)):
     Date_debut = dt.datetime(year, month, day, hour)
     timedelta = dt.timedelta(0,0,0,0,0,Delta)
     toto=[Date_debut+i*timedelta for i in range(nbDate)]
-    # #Répertoire de travail
+    #repertoire fichier nc
     chemin_nc = '/cnrm/recyf/Work/temp/ormieresl/NO_SAVE/cache/vortex/arpege/4dvarfr/'+str(expe[e])+'/'
-    
-    #Loop: read files
     for date_dt in toto:
         print(date_dt)
         date = '%4.4i%2.2i%2.2iT%2.2i00A'%(date_dt.year,\
         date_dt.month,\
         date_dt.day,\
         date_dt.hour)
-        print(date) #Read repertory name
+        print(date) #date - nom du repertoire 
         date_3 = '%2.2i%2.2i%2.2i%2.2i00'%(date_dt.year,\
         date_dt.month,\
         date_dt.day,\
@@ -151,19 +149,15 @@ for e in range(len(expe)):
             myfile = Dataset(fic_nc,'r')
         #print(myfile.variables) #structure fichier
     
-        #Pour donner des noms explicites aux différentes variables :
+        #pour donner des noms explicites aux différentes variables :
         odb_key_val_dic = {}
         for variables in myfile.variables.keys():
         #instrument_int = myfile[variables].odb_name[:myfile[variables].odb_name.index('@')]
             odb_key_val_dic[variables] = myfile[variables][:]
                 #print(variables,'->',instrument_int)
                 
-        # ind_flag = np.where((odb_key_val_dic['col_1']>1)&
-        # (odb_key_val_dic['col_1']<2)&
-        # (odb_key_val_dic['col_2']>40)&
-        # (odb_key_val_dic['col_2']<42))
-        
-        #EURAT
+        #decommenter le domaine qu'on veut (a optimiser) 
+        ##eurat
         # zone='eurat'
         # ind_flag_tot = np.where((odb_key_val_dic['col_1']>-35)&
         # (odb_key_val_dic['col_1']<45)&
@@ -176,7 +170,7 @@ for e in range(len(expe)):
         # (odb_key_val_dic['col_2']<72)&
         # (odb_key_val_dic['col_10']==1))
         
-        # #Med
+        ##mediterranean
         # zone='med'
         # ind_flag_tot = np.where((odb_key_val_dic['col_1']>3)&
         # (odb_key_val_dic['col_1']<16)&
@@ -190,7 +184,7 @@ for e in range(len(expe)):
         # (odb_key_val_dic['col_10']==1))
         
         
-        #N ATL
+        ##north atlantic
         # zone='nordat'
         # ind_flag_tot = np.where((odb_key_val_dic['col_1']<0)&
         # (odb_key_val_dic['col_1']>-80)&
@@ -204,7 +198,7 @@ for e in range(len(expe)):
         # (odb_key_val_dic['col_10']==1))
         
         
-        # TROPIQUES
+        ##tropics
         # zone='tropics'
         # ind_flag_tot = np.where((odb_key_val_dic['col_1']<180)&
         # (odb_key_val_dic['col_1']>-180)&
@@ -218,7 +212,7 @@ for e in range(len(expe)):
         # (odb_key_val_dic['col_10']==1))
         
                       
-        ## South. Hem
+        ##south. Hem
         # zone='hs20'
         # ind_flag_tot = np.where((odb_key_val_dic['col_1']<180)&
         # (odb_key_val_dic['col_1']>-180)&
@@ -232,7 +226,7 @@ for e in range(len(expe)):
         # (odb_key_val_dic['col_10']==1))
         
         
-        ## Norht. Hem
+        ##norht. Hem
         # zone='hn20'
         # ind_flag_tot = np.where((odb_key_val_dic['col_1']<180)&
         # (odb_key_val_dic['col_1']>-180)&
@@ -245,14 +239,12 @@ for e in range(len(expe)):
         # (odb_key_val_dic['col_2']<75)&
         # (odb_key_val_dic['col_10']==1))
         
-        # ##Glo
+        ##global
         zone='Glo'
         ind_flag_tot = np.where((odb_key_val_dic['col_1']<180)&
         (odb_key_val_dic['col_1']>-180))
         
         ind_flag = np.where((odb_key_val_dic['col_10']==1))
-        
-
         
         #An depar
         data2plota =    -odb_key_val_dic['col_9'][ind_flag] ## col_7:obs SST, col_8 fg_depar-obs, col_9 an_depar-obs
@@ -271,7 +263,7 @@ for e in range(len(expe)):
         Nb_tot_fg=len(data2plotb_tot)
         Nb_an=len(data2plota)
 
-        #diurnal mean compute
+        #moyehnne journaliere sur le domaine
         an_depar = data2plota.mean()
         fg_depar = data2plotb.mean()
 
@@ -280,9 +272,7 @@ for e in range(len(expe)):
             
         # Use the loc method to add the new row to the DataFrame
         df_diurne_bouees.loc[len(df_diurne_bouees)] = new_row
-  
-    # drop first line
-df_diurne_bouees.drop(index=df_diurne_bouees.index[0], axis=0, inplace=True) ## DELETE FIRST LINE
+df_diurne_bouees.drop(index=df_diurne_bouees.index[0], axis=0, inplace=True) ##drop first line
     
     ## Enregistre df separé
     # df_diurne_bouees.to_csv('DF_diurne'+'/'+'diurne_bouees_septembre_octobre_'+'.csv')
@@ -296,7 +286,7 @@ df_GKCJ_bouees=df_diurne_bouees.loc[(df_diurne_bouees['expe']==str(expe[6]))]
 
 
 #%%
-# FIGURE Eval SST, avec Mercator et bouees
+#figure
 # %matplotlib inline
 import matplotlib.pyplot as plt
 plt.style.use('seaborn-white')
@@ -313,13 +303,10 @@ xx=lst
 xind = xx[0:len(xx):N] # Pas des dates plot
 xlabels = df_GN84_bouees.date[0:len(df_GN84_bouees.date):N]
 
-# ax[0].set_ylabel('Analyse - Buoys (°C)',fontsize=23)
-# ax[0].yaxis.set_tick_params(labelsize=23)
-# ax[0].tick_params(labelbottom=False)
 ax[0].grid(True, alpha=0.5)
 
-## ARRANGE FIGURE
-## BIAIS
+##figure arrrange 
+##biais
 ax[0].grid(True, alpha=0.5)
 ax[0].set_xticks([])
 ax[0].set_ylabel('Analyse - buoys (°C)',fontsize=24)
@@ -328,7 +315,6 @@ xlabels = df_GN84_bouees.date[0:len(df_GN84_bouees.date):N]
 ax[0].set_xticks(xind,labels=xlabels,rotation=45,fontsize=18)
 ax[0].yaxis.set_tick_params(labelsize=24)
 
-# plt.suptitle('-andepar,'+str(zone),fontsize=22, y=0.88)
 ax[0].plot(df_GL55_bouees.date,df_GL55_bouees['andepar'],color=color_GL55,label='L.26 ',linewidth=2,linestyle='-')
 ax[0].plot(df_GKOR_bouees.date,df_GKOR_bouees['andepar'],color=color_GKOR,label='L.12',linewidth=2,linestyle='-')
 ax[0].plot(df_GKPH_bouees.date,df_GKPH_bouees['andepar'],color=color_GKPH,label='R.50 ',linewidth=2,linestyle='-')
@@ -351,8 +337,8 @@ ax2.yaxis.set_tick_params(labelsize=23,labelcolor='steelblue')
 ax2.yaxis.set_label_coords(1.10, .5)
 ax[0].yaxis.set_label_coords(-0.08, .5)
 
-## ARRANGE FIGURE
-## BIAIS
+##figure arange
+##biais
 ax[1].grid(True, alpha=0.5)
 ax[1].set_xticks([])
 ax[1].set_ylabel('Forecast - buoys (°C)',fontsize=24)
@@ -361,7 +347,6 @@ xlabels = df_GN84_bouees.date[0:len(df_GN84_bouees.date):N]
 ax[1].set_xticks(xind,labels=xlabels,rotation=45,fontsize=18)
 ax[1].yaxis.set_tick_params(labelsize=24)
 
-# plt.suptitle('-fgdepar, '+str(zone),fontsize=22, y=0.88)
 ax[1].plot(df_GL55_bouees.date,df_GL55_bouees['fgdepar'],color=color_GL55,label='L.26 ',linewidth=2,linestyle='-')
 ax[1].plot(df_GKOR_bouees.date,df_GKOR_bouees['fgdepar'],color=color_GKOR,label='L.12 ',linewidth=2,linestyle='-')
 ax[1].plot(df_GKPH_bouees.date,df_GKPH_bouees['fgdepar'],color=color_GKPH,label='R.50',linewidth=2,linestyle='-')
